@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -70,6 +71,20 @@
      
 
             
+=======
+@extends('layouts.app')
+
+@section('content')
+    @if (Auth::check())
+        <?php $user = Auth::user(); ?>
+        {{ $user->name }}
+    @else
+        <div class="center jumbotron">
+            <div class="text-center">
+                <h1>Letion News</h1>
+                {!! link_to_route('signup.get', 'Sign up now!', null, ['class' => 'btn btn-lg btn-primary']) !!}
+            </div>
+>>>>>>> 328ab395c4f2c00f923b405c97ef91dc4ec2c756
         </div>
-    </body>
-</html>
+    @endif
+@endsection
