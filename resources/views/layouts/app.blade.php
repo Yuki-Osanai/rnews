@@ -39,8 +39,8 @@
                         &nbsp;
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-left">
                         <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
@@ -58,6 +58,8 @@
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
+                                        <a href="#">MyPage</a>
+                                        <a href="#">Ranking</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
@@ -67,6 +69,10 @@
                             </li>
                         @endguest
                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <a href="#" class="btn btn-default">投稿</a>
+                        
+                        
                 </div>
             </div>
         </nav>
