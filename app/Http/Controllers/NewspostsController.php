@@ -13,15 +13,15 @@ class NewspostsController extends Controller
     {
          $data = [];
         if (\Auth::check()) {
-            $user = \Auth::user();
-            $newsposts = $user->newsposts()->orderBy('created_at', 'desc')->paginate(10);
+            $user = User::all();
+            $newsposts = Newspost::all();
 
             $data = [
                 'user' => $user,
                 'newsposts' => $newsposts,
             ];
             $data += $this->counts($user);
-            return view('users.show', $data);
+            return view('welcome', $data);
         }else {
             return view('welcome');
         }
