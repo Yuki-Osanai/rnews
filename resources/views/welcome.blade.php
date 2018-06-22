@@ -1,7 +1,6 @@
 @extends('layouts.welcomeapp')
 
 @section('cover')
- 
        
 	        <div class="row">
 	    	<div class="cover-img" style="background-image:url('back.jpg');">
