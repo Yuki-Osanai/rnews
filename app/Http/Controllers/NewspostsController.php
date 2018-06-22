@@ -36,22 +36,8 @@ class NewspostsController extends Controller
     
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'content' => 'required|max:191',
-             'titile' => 'required|max:191',
-              'url' => 'required|max:191',
-        ]);
-
-        $request->user()->newsposts()->create([
-            'content' => $request->content,
-            'title'=> $request->title,
-            'url'=> $request->url,
-            
-            
-            
-        ]);
-
-        return redirect()->back();
+        //
+  
     }
 
     public function show($id)
@@ -68,16 +54,7 @@ class NewspostsController extends Controller
    
     public function update(Request $request, $id)
     {
-         $this->validate($request, [
-            'content' => 'required|max:191',
-             'titile' => 'required|max:191',
-              'url' => 'required|max:191',
-        ]);
-         $newspost = Newspost::find($id);
-      
-         $newspost->'content' => $request->content;
-         $newspost->'title'=> $request->title;
-         $newspost->'url'=> $request->url;
+        //
     }
 
    
