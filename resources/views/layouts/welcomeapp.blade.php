@@ -26,7 +26,7 @@
                 /* ワイドスクリーン用のCSS */
                 @media only screen and (min-width: 100px) {
             	.cover-img {
-	            	height: 800px;
+	            	height: 750px;
             	}
                 }
                 
@@ -61,47 +61,47 @@
                 }
          
 
-                .full-height {
-                    height: 100vh;
-                }
+            .full-height {
+                height: 100vh;
+            }
 
-                .flex-center {
-                    align-items: center;
-                    display: flex;
-                    justify-content: center;
-                }
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
 
-                .position-ref {
-                    position: relative;
-                }
+            .position-ref {
+                position: relative;
+            }
 
-                .top-right {
-                    position: absolute;
-                    right: 10px;
-                    top: 18px;
-                }
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
 
-                .content {
-                    text-align: center;
-                }
+            .content {
+                text-align: center;
+            }
 
-                .title {
-                    font-size: 84px;
-                }
+            .title {
+                font-size: 84px;
+            }
 
-                .links > a {
-                    color: #636b6f;
-                    padding: 0 25px;
-                    font-size: 12px;
-                    font-weight: 600;
-                    letter-spacing: .1rem;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                }
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
 
-                .m-b-md {
-                    margin-bottom: 30px;
-                }
+            .m-b-md {
+                margin-bottom: 30px;
+            }
             
 
             
@@ -111,7 +111,6 @@
 
     </head>
     <body>
-        @include('commons.navbar')
         @yield('cover')
 
         <div class="container">

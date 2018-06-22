@@ -13,8 +13,8 @@ class NewspostsController extends Controller
     {
          $data = [];
         if (\Auth::check()) {
-            $user = User::all();
-            $newsposts = Newspost::all();
+            $user = \Auth::user();
+            $newsposts = $user->newsposts()->orderBy('created_at', 'desc')->paginate(10);
 
             $data = [
                 'user' => $user,
