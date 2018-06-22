@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -19,11 +18,7 @@
 
         <!-- Styles -->
         <style>
-            .container {
-                 margin-left: auto;
-                 margin-right:auto;   
-            }
-            
+       
              .cover-img {
                 	height: 100px;
                 	display: table;
@@ -34,29 +29,15 @@
                 /* ワイドスクリーン用のCSS */
                 @media only screen and (min-width: 100px) {
             	.cover-img {
-	            	height: 800px;
+	            	height: 700px;
             	}
-                }
-
-                /* タブレット用のCSS */
-                @media only screen and (min-width : 768px) and (max-width : 1200px) {
-            	.cover-img {
-            		height: 500px;
-                	}
-                }
-
-                /* スマホ用のCSS */
-                @media only screen and (max-width: 479px) {
-            	.cover-img {
-            		height: 300px;
-                	}
                 }
 
                 .cover-text {
                 	display: table-cell;
                 	vertical-align: middle;
                    text-align: center;
-                     font-size:600%;
+                     font-size:400%;
                      font-family :Monotype Corsiva, sans-serif;
                      
                 }
@@ -64,7 +45,7 @@
                 .square_btn {
                     position: relative;
                     display: inline-block;
-                    padding: 0.45em 0.9em;
+                    padding: 0.005em 0.01em;
                     text-decoration: none;
                     background: #00BCD4;/*背景色*/
                     color: #00BCD4;/*=背景色*/
@@ -135,23 +116,4 @@
 			</div>
 	    	</div>
         	</div>
-=======
-@extends('layouts.app')
-
-@section('content')
-    @if (Auth::check())
-        <?php $user = Auth::user(); ?>
-        {{ $user->name }}
-    @else
-        <div class="center jumbotron">
-            <div class="text-center">
-                <h1>Letion News</h1>
-                {!! link_to_route('signup.get', 'Sign up now!', null, ['class' => 'btn btn-lg btn-primary']) !!}
->>>>>>> 328ab395c4f2c00f923b405c97ef91dc4ec2c756
-            </div>
-     
-
-            
-        </div>
-    @endif
-@endsection
+</html>
