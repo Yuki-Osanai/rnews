@@ -26,7 +26,7 @@
                 /* ワイドスクリーン用のCSS */
                 @media only screen and (min-width: 100px) {
             	.cover-img {
-	            	height: 800px;
+	            	height: 750px;
             	}
                 }
                 
@@ -111,7 +111,6 @@
 
     </head>
     <body>
-        @include('commons.navbar')
         @yield('cover')
 
         <div class="container">
