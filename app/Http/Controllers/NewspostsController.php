@@ -38,20 +38,28 @@ class NewspostsController extends Controller
     {
         $this->validate($request, [
             'content' => 'required|max:191',
-             'titile' => 'required|max:191',
+             'title' => 'required|max:191',
               'url' => 'required|max:191',
         ]);
 
         $request->user()->newsposts()->create([
             'content' => $request->content,
-            'title'=> $request->title,
-            'url'=> $request->url,
-            
-            
+             'url' => $request->url,
+             'title' => $request->title,
             
         ]);
+    
+        return redirect('/');
 
-        return redirect()->back();
+
+    //   $newspost = new Newspost;
+    //         $newspost->content = $request->content;
+    //         $newspost->title = $request->title;
+    //         $newspost->url = $request->url;
+    //          $newspost->save();
+            
+    //         return redirect('/');
+            
     }
 
     public function show($id)
@@ -68,6 +76,20 @@ class NewspostsController extends Controller
    
     public function update(Request $request, $id)
     {
+        
+    //     $this->validate($request, [
+    //         'content' => 'required|max:191',
+    //          'title' => 'required|max:191',
+    //           'url' => 'required|max:191',
+    //     ]);
+        
+    //   $newspost = new Newspost;
+    //         $newspost->content = $request->content;
+    //         $newspost->title = $request->title;
+    //         $newspost->url = $request->url;
+    //          $newspost->save();
+            
+    //         return redirect('/');
     }
 
    

@@ -10,10 +10,9 @@
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $newspost->created_at }}</span>
             </div>
              <div>
+                <p>{!! nl2br(e($newspost->url)) !!}</p>
                 <p>{!! nl2br(e($newspost->content)) !!}</p>
                 <p>{!! nl2br(e($newspost->title)) !!}</p>
-                <p>{!! nl2br(e($newspost->url)) !!}</p>
-                
             </div>
             <div>
                 @if (Auth::id() == $newspost->user_id)

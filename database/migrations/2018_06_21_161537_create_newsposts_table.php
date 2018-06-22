@@ -17,6 +17,9 @@ class CreateNewspostsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->string('content');
+            $table->string('title');
+            $table->string('url');
+            
             $table->timestamps();
 
             // 外部キー制約
