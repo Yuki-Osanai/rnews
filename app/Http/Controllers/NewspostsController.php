@@ -54,11 +54,7 @@ class NewspostsController extends Controller
    
     public function update(Request $request, $id)
     {
-<<<<<<< HEAD
         //
-=======
-      //
->>>>>>> origin
     }
 
    
