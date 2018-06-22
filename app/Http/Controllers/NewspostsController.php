@@ -39,7 +39,7 @@ class NewspostsController extends Controller
         $this->validate($request, [
             'content' => 'required|max:191',
              'titile' => 'required|max:191',
-              'url' => 'required|max:191'
+              'url' => 'required|max:191',
         ]);
 
         $request->user()->newsposts()->create([
@@ -68,7 +68,16 @@ class NewspostsController extends Controller
    
     public function update(Request $request, $id)
     {
-        //
+         $this->validate($request, [
+            'content' => 'required|max:191',
+             'titile' => 'required|max:191',
+              'url' => 'required|max:191',
+        ]);
+         $newspost = Newspost::find($id);
+      
+         $newspost->'content' => $request->content;
+         $newspost->'title'=> $request->title;
+         $newspost->'url'=> $request->url;
     }
 
    
