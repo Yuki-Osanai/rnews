@@ -24,6 +24,8 @@
                 	display: table;
                 	width: 100%;
                 	background-size: cover;
+                	background-color: rgba(0,0,0,0.005);
+                	
                 }
 
                 /* ワイドスクリーン用のCSS */
@@ -37,7 +39,7 @@
                 	display: table-cell;
                 	vertical-align: middle;
                    text-align: center;
-                     font-size:400%;
+                     font-size:300%;
                      font-family :Monotype Corsiva, sans-serif;
                      
                 }
@@ -45,10 +47,10 @@
                 .square_btn {
                     position: relative;
                     display: inline-block;
-                    padding: 0.005em 0.01em;
+                    padding: 0.005em 0.3em;
                     text-decoration: none;
-                    background: #00BCD4;/*背景色*/
-                    color: #00BCD4;/*=背景色*/
+                    background: #ADD8E6;/*背景色*/
+                    color: #778899;/*=背景色*/
                     box-shadow: inset 0 2px 0 rgba(255,255,255,0.2);
                     border-bottom: solid 2px #118e9e;
                     border-radius: 4px;
@@ -103,6 +105,10 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            
+            
+
+            
         </style>
     </head>
     <body>
@@ -112,8 +118,10 @@
 		    <div class="cover-text text-center">
 		        
 				<p style="color: #fff;">Welcome To Leutain News</p>
-				<a href="#" class="square_btn">☞Go to see</a>
+				<a href="#" class="square_btn">☞Go to SignUp</a>
+				<a href="#" class="square_btn">☞Go to LogIn</a>
 			</div>
 	    	</div>
+        	</div>
         	</div>
 </html>
