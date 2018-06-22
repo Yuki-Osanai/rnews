@@ -9,5 +9,13 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function counts($user) {
+        $count_newsposts = $user->newsposts()->count();
+
+        return [
+            'count_newsposts' => $count_newsposts,
+        ];
+    }
 }
