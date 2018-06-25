@@ -27,6 +27,26 @@ class NewspostsController extends Controller
         }
     }
 
+ public function mypage()
+    {
+         $data = [];
+        if (\Auth::check()) {
+            $user = \Auth::user();
+            $newsposts = $user->newsposts()->orderBy('created_at', 'desc')->paginate(10);
+
+            $data = [
+                'user' => $user,
+                'newsposts' => $newsposts,
+            ];
+            $data += $this->counts($user);
+            return view('newsposts.newsposts', $data);
+        }else {
+            return view('welcome');
+        }
+    }
+
+
+
     
     public function create()
     {
