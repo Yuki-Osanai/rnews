@@ -17,7 +17,7 @@ class Controller extends BaseController
 
         return [
             'count_newsposts' => $count_newsposts,
-            'count_favoritings' => $count_favoritings,
+            'count_favorite' => $count_favorite,
         ];
         
         $count_newsposts = $user->newsposts()->count();
