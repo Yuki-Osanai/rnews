@@ -12,11 +12,7 @@
 			</div>
 	    	</div>
         	</div>
-<<<<<<< HEAD
-</html>
-=======
     
 @endsection
 
 
->>>>>>> 6f64659a54bf8ac3013dc16bd2477dcfc05869c3

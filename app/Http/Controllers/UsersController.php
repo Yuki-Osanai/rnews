@@ -31,7 +31,7 @@ class UsersController extends Controller
     
     public function show($id)
     {
-        $user = User::find($id);
+        $users = User::find($id);
         $newsposts = $user->newsposts()->orderBy('created_at', 'desc')->paginate(10);
 
         $data = [
