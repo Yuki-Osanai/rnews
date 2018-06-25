@@ -14,6 +14,7 @@
         	</div>
     
 @endsection
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -48,3 +49,5 @@
 =======
 >>>>>>> origin/master
 >>>>>>> ca551cf39081d7d0aca0b48bf4d903cf5f755cfc
+=======
+>>>>>>> 83beb48ae6c10625cf3d8ef4322edba1e3ba3b53
