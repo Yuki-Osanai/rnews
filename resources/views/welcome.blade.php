@@ -9,6 +9,7 @@
 				<p style="color: #fff;">Welcome To Leutain News</p>
 				<a href="{{ route('signup.get') }}" class="square_btn">☞Go to SignUp</a>
 				<a href="{{ route('login') }}" class="square_btn">☞Go to LogIn</a>
+				
 			</div>
 	    	</div>
         	</div>
