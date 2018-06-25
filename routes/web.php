@@ -6,6 +6,8 @@ Route::get('/', function () {
 });
 
 Route::get('/', 'NewspostsController@index');
+Route::get('mypage','NewspostsController@mypage');
+
 
 
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
@@ -19,3 +21,4 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController');
     Route::resource('newsposts', 'NewspostsController', ['only' => ['store', 'destroy']]);
 });
+
