@@ -6,7 +6,7 @@ Route::get('/', function () {
 });
 
 Route::get('/', 'NewspostsController@index');
-Route::get('mypage','NewspostsController@mypage');
+Route::get('mypage','NewspostsController@mypage')->name('mypage.show');
 
 
 
