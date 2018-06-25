@@ -16,7 +16,7 @@
                     <h3 class="panel-title">Profile</h3>
                 </div>
                 <div class="panel-body">
-                    <img class="media-object img-rounded img-responsive" src="{{ Gravatar::src($user->email, 500) }}" alt="">
+                  
                 </div>
             </div>
            <div class="panel-heading">

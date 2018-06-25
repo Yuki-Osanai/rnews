@@ -6,11 +6,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateNewspostsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('newsposts', function (Blueprint $table) {
@@ -19,7 +14,7 @@ class CreateNewspostsTable extends Migration
             $table->string('content');
             $table->string('title');
             $table->string('url');
-            
+
             $table->timestamps();
 
             // 外部キー制約
@@ -27,11 +22,7 @@ class CreateNewspostsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+
     public function down()
     {
         Schema::dropIfExists('newsposts');

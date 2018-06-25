@@ -56,8 +56,34 @@ class NewspostsController extends Controller
     
     public function store(Request $request)
     {
-        //
+
   
+
+        $this->validate($request, [
+            'content' => 'required|max:191',
+             'title' => 'required|max:191',
+              'url' => 'required|max:191',
+        ]);
+
+        $request->user()->newsposts()->create([
+            'content' => $request->content,
+             'url' => $request->url,
+             'title' => $request->title,
+            
+        ]);
+    
+        return redirect('/');
+
+
+    //   $newspost = new Newspost;
+    //         $newspost->content = $request->content;
+    //         $newspost->title = $request->title;
+    //         $newspost->url = $request->url;
+    //          $newspost->save();
+            
+    //         return redirect('/');
+            
+
     }
 
     public function show($id)
@@ -74,7 +100,22 @@ class NewspostsController extends Controller
    
     public function update(Request $request, $id)
     {
-        //
+
+        
+    //     $this->validate($request, [
+    //         'content' => 'required|max:191',
+    //          'title' => 'required|max:191',
+    //           'url' => 'required|max:191',
+    //     ]);
+        
+    //   $newspost = new Newspost;
+    //         $newspost->content = $request->content;
+    //         $newspost->title = $request->title;
+    //         $newspost->url = $request->url;
+    //          $newspost->save();
+            
+    //         return redirect('/');
+
     }
 
    
