@@ -3,7 +3,7 @@
 @section('cover')
        
 	        <div class="row">
-	    	<div class="cover-img" style="background-image:url('back.jpg');">
+	    	<div class="cover-img" style="background-image:url('dog.jpg');">
 		    <div class="cover-text text-center">
 		        
 				<p style="color: #fff;">Welcome To Leutain News</p>
