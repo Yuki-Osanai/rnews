@@ -21,8 +21,8 @@ Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
 Route::group(['prefix' => 'users/{id}'], function () {
 Route::post('favorite', 'UserFavoriteController@store')->name('user.favorite');
 Route::delete('unfavorite', 'UserFavoriteController@destroy')->name('user.unfavorite');
-Route::get('favoritings', 'UsersController@followings')->name('users.favoritings');
-Route::get('favorites', 'UsersController@followers')->name('users.favorites');
+Route::get('favoritings', 'UsersController@favoritings')->name('users.favoritings');
+Route::get('favorites', 'UsersController@favorites')->name('users.favorites');
     });
 
 

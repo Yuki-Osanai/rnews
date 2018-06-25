@@ -13,11 +13,11 @@ class Controller extends BaseController
     
     public function counts($user) {
         $count_newsposts = $user->newsposts()->count();
-        $count_favorite = $user->favoritings()->count();
+        $count_favorites = $user->favorites()->count();
 
         return [
             'count_newsposts' => $count_newsposts,
-            'count_favoritings' => $count_favoritings,
+            'count_favorites' => $count_favorites,
         ];
         
         $count_newsposts = $user->newsposts()->count();

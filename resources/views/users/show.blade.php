@@ -22,8 +22,9 @@
             @endif
              @if (count($newsposts) > 0)
                 @include('newsposts.newsposts', ['newsposts' => $newsposts])
+                
             @endif
-           
+            
         </div>
     </div>
 @endsection

@@ -22,43 +22,39 @@ class User extends Authenticatable
     {
         return $this->hasMany(Newspost::class);
     }
-    public function favoritings()
-    {
-        return $this->belongsToMany(User::class, 'user_favorite', 'user_id', 'favorite_id')->withTimestamps();
-    }
 
     public function favorites()
     {
-        return $this->belongsToMany(User::class, 'user_favorite', 'favorite_id', 'user_id')->withTimestamps();
+        return $this->belongsToMany(Newspost::class, 'user_favorite', 'user_id', 'favorite_id')->withTimestamps();
     }
     
-    public function favorite($userId)
+    public function favorite($newspostId)
     {
     // 既にお気に入りしているかの確認
-    $exist = $this->is_favoriting($userId);
-    // 自分自身ではないかの確認
-    $its_me = $this->id == $userId;
+    $exist = $this->is_favorites($newspostId);
+    // // 自分自身ではないかの確認
+    // $its_me = $this->id == $userId;
 
-    if ($exist || $its_me) {
+    if ($exist) {
         // 既にお気に入りしていれば何もしない
         return false;
     } else {
         // 未お気に入りであればお気に入りする
-        $this->favoritings()->attach($userId);
+        $this->favorites()->attach($newspostId);
         return true;
     }
     }
 
-    public function unfavorite($userId)
+    public function unfavorite($newspostId)
     {
     // 既にお気に入りしているかの確認
-    $exist = $this->is_favoriting($userId);
-    // 自分自身ではないかの確認
-    $its_me = $this->id == $userId;
+    $exist = $this->is_favorites($newspostId);
+    // // 自分自身ではないかの確認
+    // $its_me = $this->id == $userId;
 
-    if ($exist && !$its_me) {
+    if ($exist) {
         // 既にお気に入りしていればお気に入りを外す
-        $this->favoritings()->detach($userId);
+        $this->favorites()->detach($newspostId);
         return true;
     } else {
         // 未お気に入りであれば何もしない
@@ -67,7 +63,7 @@ class User extends Authenticatable
     }
     
 
-    public function is_favoriting($userId) {
-    return $this->favoritings()->where('favorite_id', $userId)->exists();
+    public function is_favorites($newspostId) {
+    return $this->favorites()->where('favorite_id', $newspostId)->exists();
     }
 }

@@ -13,6 +13,7 @@
                 <p>{!! nl2br(e($newspost->url)) !!}</p>
                 <p>{!! nl2br(e($newspost->content)) !!}</p>
                 <p>{!! nl2br(e($newspost->title)) !!}</p>
+                @include('user_favorite.favorite_button', ['newsposts' => $newspost])
             </div>
             <div>
                 @if (Auth::id() == $newspost->user_id)
