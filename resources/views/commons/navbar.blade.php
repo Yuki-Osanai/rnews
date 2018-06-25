@@ -23,7 +23,7 @@
                     <button type="button" class="btn btn-default">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" > <span class = "glyphicon glyphicon-menu-hamburger"></span></a>
                         <ul class="dropdown-menu">
-                            <li>{!! link_to_route('users.show', 'My Page', ['id' => Auth::id()]) !!}</li> <!--newsposts.newspostsにリンク先要変更-->
+                            <li>{!! link_to_route('mypage.show', 'My Page', ['id' => Auth::id()]) !!}</li> <!--newsposts.newspostsにリンク先要変更-->
                             <li>{!! link_to_route('login', 'Ranking') !!}</li> <!--リンク先要変更-->
                             <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
                         </ul>
