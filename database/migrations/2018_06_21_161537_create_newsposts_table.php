@@ -4,19 +4,14 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 class CreateNewspostsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('newsposts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
-            $table->string('content' ,1000);
-            $table->string('url');
+            $table->string('content');
             $table->string('title');
+            $table->string('url');
             $table->timestamps();
             // 外部キー制約
             $table->foreign('user_id')->references('id')->on('users');
@@ -24,11 +19,7 @@ class CreateNewspostsTable extends Migration
     }
 
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+
     public function down()
     {
         Schema::dropIfExists('newsposts');
