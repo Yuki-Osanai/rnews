@@ -51,12 +51,5 @@
             </div>
         </div>
 @endforeach
-<<<<<<< HEAD
 </ul>
 {!! $newsposts->render() !!}
-=======
-@endsection
-
-
-{!! $newsposts->render() !!}
->>>>>>> master

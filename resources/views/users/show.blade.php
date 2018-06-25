@@ -21,18 +21,8 @@
                       </div>
                   {!! Form::close() !!}
             @endif
-<<<<<<< HEAD
-             @if (count($newsposts) > 0)
-                @include('newsposts.newsposts', ['newsposts' => $newsposts])
-               
-                
-            @endif
-            
-            
-=======
          
            
->>>>>>> master
         </div>
     </div>
 @endsection
