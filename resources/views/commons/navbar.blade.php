@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Letian News</a>
+                <a class="navbar-brand" href="mypage">Letian News</a>
             </div>
             
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -20,7 +20,7 @@
                             
                             <ul class="dropdown-menu">
                                 <li>{!! link_to_route('users.show', 'News post', ['id' => Auth::id()]) !!}</li>
-                         
+                                
                                 
                                 <li role="separator" class="divider"></li>
                                 <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
