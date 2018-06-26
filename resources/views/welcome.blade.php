@@ -13,10 +13,5 @@
 			</div>
 	    	</div>
         	</div>
-<<<<<<< HEAD
 
 @endsection
-=======
-    
-@endsection
->>>>>>> 83beb48ae6c10625cf3d8ef4322edba1e3ba3b53
