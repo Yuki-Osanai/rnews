@@ -5,7 +5,7 @@
             
             .row{
                
-                     font-family :cursive, sans-serif;
+                     font-family :arial;
             }
                 p {
                     text-align: center;
@@ -13,7 +13,9 @@
                     }
                     
                 .form-group{
-                
+                    
+                    font-size: 20px;
+                    font-family: "arial";                
                     padding: 0.5em 1em;
                     margin: auto;
                     color: #5d627b;
@@ -28,8 +30,8 @@
                     padding: 0.5em 1em;
                     text-decoration: none;
                     background: #f7f7f7;
-                    border-left: solid 6px #ff7c5c;/*左線*/
-                    color: #ff7c5c;/*文字色*/
+                    border-left: solid 6px #8da0b6;/*左線*/
+                    color: #8da0b6;/*文字色*/
                     font-weight: bold;
                     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
                     }
@@ -45,7 +47,7 @@
     <div class="row">
         <div class="col-xs-9 col-xs-offset-1">
             <ul class="nav nav-tabs nav-justified">
-                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Letian News投稿フォーム<span class="badge">{{ $count_newsposts }}</span></a></li>
+                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Letian News投稿フォーム<span class="badge"></span></a></li>
             </ul>
             
             
@@ -53,7 +55,7 @@
                   {!! Form::open(['route' => 'newsposts.store']) !!}
                       <div class="form-group">
                           
-                          <p>ニュースのURL</p>
+                          <p>ニュースURL</p>
                           {!! Form::textarea('url', old('url'), ['class' => 'form-control', 'rows' => '2']) !!}
                           <p>ニュースタイトル（150字以内）</p>
                           {!! Form::textarea('title', old('title'), ['class' => 'form-control', 'rows' => '2']) !!}
