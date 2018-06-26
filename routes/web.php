@@ -7,7 +7,7 @@ Route::get('/', function () {
 
 Route::get('/', 'NewspostsController@index');
 Route::get('mypage','NewspostsController@mypage')->name('mypage.show');
-
+Route::get('ichiran','NewspostsController@ichiran')->name('ichiran');
 
 
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
