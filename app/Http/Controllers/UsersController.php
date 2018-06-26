@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\User;
-use App\Newspost;
 
 class UsersController extends Controller
 {
@@ -32,7 +31,7 @@ class UsersController extends Controller
     }
 
     
-  public function show($id)
+    public function show($id)
     {
         $user = User::find($id);
         $newsposts = $user->newsposts()->orderBy('created_at', 'desc')->paginate(10);
@@ -65,5 +64,20 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    public function favorites($id)
+    {
+        $user = User::find($id);
+        $favorites = $user->favorites()->paginate(10);
+
+        $data = [
+            'user' => $user,
+            'newsposts' => $favorites,
+        ];
+        
+        $data += $this->counts($user);
+        return view('users.favorites', $data);
+        
     }
 }
