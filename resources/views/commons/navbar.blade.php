@@ -47,6 +47,18 @@ i{
 font-size: 1.3em;
 color: inherit;
 }
+
+.navbar-default {
+  background-color: #8da0b6;
+}
+
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
  
 .navbar .nav {
 margin: 0;
