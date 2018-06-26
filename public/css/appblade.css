@@ -1,0 +1,14 @@
+.cover-img {
+    height: 100px;
+    display: table;
+    width: 100%;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.005);
+}
+            
+@media only screen and (min-width: 100px) {
+    .cover-img {
+	 height: 750px;
+        
+    }
+}  
