@@ -23,6 +23,7 @@ class CreateNewspostsTable extends Migration
     }
 
 
+
     public function down()
     {
         Schema::dropIfExists('newsposts');
