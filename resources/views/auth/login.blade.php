@@ -4,28 +4,16 @@
 <style>
 
 .box17{
-    margin:2em 0;
-    position: relative;
-    padding: 0.5em 1.5em;
-    border-top: solid 2px black;
-    border-bottom: solid 2px black;
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    background: #C0C0C0;
+    box-shadow: 0px 0px 0px 10px #C0C0C0;
+    border: dashed 2px white;
 }
-.box17:before, .box17:after{
-    content: '';
-    position: absolute;
-    top: -10px;
-    width: 2px;
-    height: -webkit-calc(100% + 20px);
-    height: calc(100% + 20px);
-    background-color: black;
-}
-.box17:before {left: 10px;}
-.box17:after {right: 10px;}
 .box17 p {
     margin: 0; 
     padding: 0;
 }
-
                     
 .square_btn{
     margin-left : 375px ; 
