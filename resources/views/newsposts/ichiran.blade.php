@@ -2,7 +2,10 @@
  @section('content')
  @foreach ($newsposts as $newspost)
     <?php $user = $newspost->user; ?>
-  <div class="media-body">
+  
+        <div class="col-xs-7 col-xs-offset-5">
+ 
+     
             <div>
                 
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $newspost->created_at }}</span>

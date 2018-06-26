@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/appblade.css">
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,17 +13,18 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
-           
-
     </head>
     <body>
+        
         @include('commons.navbar')
         @yield('cover')
+       <div class="cover-img" style="background-image:url('dogshiro1.png');">  
 
-        <div class="container">
+       
             @include('commons.error_messages')
 
             @yield('content')
-        </div>
+    </div>
+</div>
     </body>
 </html>
