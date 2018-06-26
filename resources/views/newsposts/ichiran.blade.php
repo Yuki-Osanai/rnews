@@ -1,11 +1,10 @@
  @extends('layouts.app')
  @section('content')
  @foreach ($newsposts as $newspost)
-    <?php $user = $newspost->user; ?>
-  
-        <div class="col-xs-7 col-xs-offset-5">
- 
-     
+
+    <?php $user = \App\User::find($newspost->user_id); ?>
+  <div class="media-body">
+
             <div>
                 
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $newspost->created_at }}</span>
@@ -14,6 +13,7 @@
                 <p>{!! nl2br(e($newspost->url)) !!}</p>
                 <p>{!! nl2br(e($newspost->content)) !!}</p>
                 <p>{!! nl2br(e($newspost->title)) !!}</p>
+                  @include('user_favorite.favorite_button', ['newsposts' => $newspost])
             </div>
             
             <div>
@@ -21,6 +21,7 @@
                     {!! Form::open(['route' => ['newsposts.destroy', $newspost->id], 'method' => 'delete']) !!}
                         {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
                     {!! Form::close() !!}
+                    
                 @endif
             </div>
         </div>
