@@ -1,5 +1,5 @@
-@extends('layouts.welcomeapp')
 
+@extends('layouts.welcomeapp')
 @section('cover')
        
 	        <div class="row">
@@ -13,7 +13,7 @@
 			</div>
 	    	</div>
         	</div>
-    
+
 @endsection
 
 
