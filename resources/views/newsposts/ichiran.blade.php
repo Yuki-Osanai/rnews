@@ -10,7 +10,19 @@
              <div>
                 <p>{!! nl2br(e($newspost->url)) !!}</p>
                 <p>{!! nl2br(e($newspost->content)) !!}</p>
+                
+                @if($newspost->font == "1")
+                <div class = 'selectfontA'>
                 <p>{!! nl2br(e($newspost->title)) !!}</p>
+                <p>A</p>
+                </div>
+                @else
+                <div class = "h4">
+                <p>{!! nl2br(e($newspost->title)) !!}</p>
+                <p>B</p>
+                </div>
+                @endif
+                
             </div>
             
             <div>
