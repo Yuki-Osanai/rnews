@@ -55,10 +55,6 @@ color: inherit;
 .navbar-default .navbar-text {
   color: #ffffff;
 }
-
-.navbar-default .navbar-brand {
-  color: #ffffff;
-}
  
 .navbar .nav {
 margin: 0;
