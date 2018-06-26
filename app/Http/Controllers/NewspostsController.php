@@ -45,9 +45,6 @@ class NewspostsController extends Controller
         }
     }
 
-
-
-    
     public function create()
     {
         //
@@ -72,14 +69,6 @@ class NewspostsController extends Controller
         return redirect('/');
 
 
-    //   $newspost = new Newspost;
-    //         $newspost->content = $request->content;
-    //         $newspost->title = $request->title;
-    //         $newspost->url = $request->url;
-    //          $newspost->save();
-            
-    //         return redirect('/');
-            
     }
 
     public function show($id)
@@ -96,20 +85,7 @@ class NewspostsController extends Controller
    
     public function update(Request $request, $id)
     {
-        
-    //     $this->validate($request, [
-    //         'content' => 'required|max:191',
-    //          'title' => 'required|max:191',
-    //           'url' => 'required|max:191',
-    //     ]);
-        
-    //   $newspost = new Newspost;
-    //         $newspost->content = $request->content;
-    //         $newspost->title = $request->title;
-    //         $newspost->url = $request->url;
-    //          $newspost->save();
-            
-    //         return redirect('/');
+    //
     }
 
    
