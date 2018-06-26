@@ -31,7 +31,7 @@
                             <li>{!! link_to_route('signup.get', 'Sign up') !!}</li>
                             <li>{!! link_to_route('login', 'Login') !!}</li>
               @endif  
-        <li>{!! link_to_route('users.show', 'Letian🐼News', ['id' => Auth::id()]) !!}</li>  <!--timeline(toppage)にリンク先要変更-->
+        <li>{!! link_to_route('ichiran', 'Letian🐼News', ['id' => Auth::id()]) !!}</li>  <!--timeline(toppage)にリンク先要変更-->
      <li>{!! link_to_route('users.show', '✎', ['id' => Auth::id()]) !!}</li>
         
     
@@ -46,6 +46,18 @@
 i{
 font-size: 1.3em;
 color: inherit;
+}
+
+.navbar-default {
+  background-color: #8da0b6;
+}
+
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
 }
  
 .navbar .nav {
