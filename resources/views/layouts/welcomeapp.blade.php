@@ -36,7 +36,7 @@
                 	vertical-align: middle;
                    text-align: center;
                      font-size:400%;
-                     font-family :Monotype Corsiva, sans-serif;
+                     font-family :arial, sans-serif;
                      
                 }
         
@@ -104,7 +104,7 @@
             }
             
 
-            
+          
 
             
         </style>

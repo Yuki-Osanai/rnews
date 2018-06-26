@@ -4,6 +4,7 @@
        
 	        <div class="row">
 	    	<div class="cover-img" style="background-image:url('dog.jpg');">
+	    		
 		    <div class="cover-text text-center">
 		        
 				<p style="color: #fff;">Welcome To Letian News</p>
@@ -13,6 +14,7 @@
 			</div>
 	    	</div>
         	</div>
+        
 
     
 @endsection
