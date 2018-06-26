@@ -49,13 +49,8 @@
     <div class="row">
         <div class="col-xs-9 col-xs-offset-1">
             <ul class="nav nav-tabs nav-justified">
-<<<<<<< HEAD
                 <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Letian News投稿フォーム<span class="badge">{{ $count_newsposts }}</span></a></li>
         
-=======
-                <h3>Letian News投稿フォーム</h3>
-                <!--<li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Letian News投稿フォーム<span class="badge"></span></a></li>-->
->>>>>>> b72a417f4cdb8ba7785268c9c028a73e40daff69
             </ul>
             
             
