@@ -59,8 +59,8 @@
                           {!! Form::textarea('title', old('title'), ['class' => 'form-control', 'rows' => '2']) !!}
                           <p>コメント（200字以内）</p>
                           {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '2']) !!}
-                          <a href="{{ route('login') }}" class="square_btn">POST</a>
-                         
+                          {!! Form::submit('Post', ['class' => 'form-control', 'rows' => '2'])!!}
+                        
                       </div>
                   {!! Form::close() !!}
             @endif
