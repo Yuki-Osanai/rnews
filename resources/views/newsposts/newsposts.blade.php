@@ -29,21 +29,25 @@
                     <img class="media-object img-rounded img-responsive" src="{{ Gravatar::src($user->email, 500) }}" alt="">
                 </div>
             </div>
-          
-               
-         <aside class="panel-title2"> <a href="#" >My Favorites</a></aside>
-                
-         
-         
-                   
-　　            
-
-                
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Profile</h3>
+                </div>
+                <div class="panel-body">
+                  
+                </div>
+            </div>
+           <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <li role="presentation" class="{{ Request::is('users/*/favorite') ? 'active' : '' }}"><a href="{{ route('users.favorites', ['id' => $user->id]) }}">Favorite <span class="badge">{{ $count_favorites }}</span></a></li>
+                    </h3>
+                </div>
      </aside>
         
 <div class="col-xs-8">
  <ul class="nav nav-tabs nav-justified">
-       <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">TimeLine <span class="badge">{{ $count_newsposts }}</span></a></li>
+       <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('mypage.show', ['id' => $user->id]) }}">TimeLine <span class="badge">{{ $count_newsposts }}</span></a></li>
+       <li role="presentation" class="{{ Request::is('users/*/favorite') ? 'active' : '' }}"><a href="{{ route('users.favorites', ['id' => $user->id]) }}">Favorite <span class="badge">{{ $count_favorites }}</span></a></li>
  </ul> 
  
     @foreach ($newsposts as $newspost)
@@ -57,6 +61,7 @@
                 <p>{!! nl2br(e($newspost->url)) !!}</p>
                 <p>{!! nl2br(e($newspost->content)) !!}</p>
                 <p>{!! nl2br(e($newspost->title)) !!}</p>
+                 @include('user_favorite.favorite_button', ['newsposts' => $newspost])
             </div>
             
             <div>

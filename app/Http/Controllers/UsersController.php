@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
+
 class UsersController extends Controller
 {
     public function index()
@@ -64,16 +66,18 @@ class UsersController extends Controller
         //
     }
     
-    public function favoritings($id)
+    public function favorites($id)
     {
         $user = User::find($id);
-        $favoritings = $user->favoritings()->paginate(10);
+        $favorites = $user->favorites()->paginate(10);
 
         $data = [
             'user' => $user,
-            'users' => $favoritings,
+            'newsposts' => $favorites,
         ];
-        return view('users.favoritings', $data);
+        
+        $data += $this->counts($user);
+        return view('users.favorites', $data);
         
     }
 }
