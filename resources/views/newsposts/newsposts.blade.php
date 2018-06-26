@@ -1,6 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
+
+        <style>
+        
+        .panel-title2{
+                   
+                    padding: 0.5em 1em;
+                   
+                    background: #f7f7f7;
+                    border-left: solid 6px #8da0b6;/*左線*/
+                 
+                   
+                    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+        }
+        
+  
+        </style>
+
+
     <div class="row">
         <aside class="col-xs-4">
             <div class="panel panel-default">
@@ -11,17 +29,16 @@
                     <img class="media-object img-rounded img-responsive" src="{{ Gravatar::src($user->email, 500) }}" alt="">
                 </div>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Profile</h3>
-                </div>
-                <div class="panel-body">
-                  
-                </div>
-            </div>
-           <div class="panel-heading">
-                    <h3 class="panel-title">ここはLikeボタンを入れる箱です</h3>
-                </div>
+          
+               
+         <aside class="panel-title2"> <a href="#" >My Favorites</a></aside>
+                
+         
+         
+                   
+　　            
+
+                
      </aside>
         
 <div class="col-xs-8">
