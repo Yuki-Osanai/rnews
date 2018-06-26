@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/navbar.css">
+
 <html>
     <header>
 <div class="navbar navbar-default" role="navigation">
@@ -42,36 +44,5 @@
  </div>
  
  
- <style>
-i{
-font-size: 1.3em;
-color: inherit;
-}
-
-.navbar-default {
-  background-color: #8da0b6;
-}
-
-.navbar-default .navbar-text {
-  color: #ffffff;
-}
- 
-.navbar .nav {
-margin: 0;
-display: table;
-width: 100%;
-}
- 
-.navbar .nav li {
-display: table-cell;
-float: none;
-}
- 
-.navbar .nav li a {
-font-weight: bold;
-text-align: center;
-}
-</style>
-
     </header>
 </html>

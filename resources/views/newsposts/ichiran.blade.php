@@ -1,8 +1,10 @@
  @extends('layouts.app')
  @section('content')
  @foreach ($newsposts as $newspost)
+
     <?php $user = \App\User::find($newspost->user_id); ?>
   <div class="media-body">
+
             <div>
                 
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $newspost->created_at }}</span>
