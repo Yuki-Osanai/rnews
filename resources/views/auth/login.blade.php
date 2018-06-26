@@ -58,7 +58,7 @@
                     {!! Form::label('password', 'Password') !!}
                     {!! Form::password('password', ['class' => 'form-control']) !!}
                 </div>
-                <a href="{{ route('login') }}" class="square_btn">LOG IN</a>
+                {!! Form::submit('Log in', ['class' => 'square_btn']) !!}
                
             {!! Form::close() !!}
 

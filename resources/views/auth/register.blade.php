@@ -64,7 +64,7 @@
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
 
-               <a href="{{ route('signup.get') }}" class="square_btn">SIGHN UP</a>
+               {!! Form::submit('Sign up', ['class' => 'square_btn']) !!}
             {!! Form::close() !!}
         </div>
     </div>
