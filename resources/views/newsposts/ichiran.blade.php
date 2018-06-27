@@ -1,7 +1,7 @@
  @extends('layouts.app')
  <link rel="stylesheet" href="{{ secure_asset('css/ichiran.css') }}">
  @section('content')
- @foreach ($newsposts as $newspost)
+ @foreach ($newsposts as $key => $newspost)
  
 <div class="main">
     <div class="kakomi-maru2">
@@ -9,7 +9,10 @@
     <?php $user = \App\User::find($newspost->user_id); ?>
   <div class="media-body">
       
-
+@if (isset($newspost->count))
+                            
+                               <p class="text-center">{{ $key+1 }}位: {{ $newspost->count}} Favorite</p>
+                       @endif
             <div>
                 
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $newspost->created_at }}</span>
@@ -17,9 +20,22 @@
              <div>
                 <p>{!! nl2br(e($newspost->url)) !!}</p>
                 <p>{!! nl2br(e($newspost->content)) !!}</p>
-                <p>{!! nl2br(e($newspost->title)) !!}</p>
+                
+                <!--@if($newspost->font == "1")-->
+                <!--<div class = 'selectfontA'>-->
+                <!--<p>{!! nl2br(e($newspost->title)) !!}</p>-->
+                <!--<p>A</p>-->
+                <!--</div>-->
+                <!--@else-->
+                <!--<div class = "h4">-->
+                <!--<p>{!! nl2br(e($newspost->title)) !!}</p>-->
+                <!--<p>B</p>-->
+                <!--</div>-->
+                <!--@endif-->
+                
                   @include('user_favorite.favorite_button', ['newsposts' => $newspost])
             </div>
+            
             
             <div>
                 @if (Auth::id() == $newspost->user_id)
