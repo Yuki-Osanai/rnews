@@ -35,4 +35,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('newsposts', 'NewspostsController', ['only' => ['store', 'destroy']]);
 });
 
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('users', 'UsersController');
+    Route::resource('comments', 'CommentsController', ['only' => ['store', 'destroy']]);
+});
+
 
