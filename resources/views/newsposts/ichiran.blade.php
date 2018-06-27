@@ -21,8 +21,10 @@
                     {!! Form::open(['route' => ['newsposts.destroy', $newspost->id], 'method' => 'delete']) !!}
                         {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
                     {!! Form::close() !!}
-                    
                 @endif
+            </div>
+            <div>
+                 <li>{!! link_to_route('comment', 'Comment', ['id' => $newspost->id]) !!}</li> 
             </div>
         </div>
 @endforeach
