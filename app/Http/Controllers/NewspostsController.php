@@ -22,6 +22,7 @@ class NewspostsController extends Controller
             return view('welcome');
         }
     }
+    
  public function mypage()
     {
          $data = [];
@@ -74,13 +75,11 @@ class NewspostsController extends Controller
             'content' => 'required|max:191',
              'title' => 'required|max:191',
               'url' => 'required|max:191',
-              'font' => 'required|max:191',
         ]);
         $request->user()->newsposts()->create([
             'content' => $request->content,
              'url' => $request->url,
              'title' => $request->title,
-            'font' => $request->font,
         ]);
 
         return redirect('ichiran');
@@ -89,7 +88,11 @@ class NewspostsController extends Controller
     }
     public function show($id)
     {
-        //
+        $comments = \App\Newspost::find($id);
+
+        return view('comment.comment', [
+            'newspost' => $comments,
+        ]);
     }
    
     public function edit($id)
