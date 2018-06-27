@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="{{ secure_asset('css/navbar.css') }}">
 
 <html>
     <header>
