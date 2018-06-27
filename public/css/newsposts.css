@@ -1,0 +1,22 @@
+
+  
+       
+ .form-group {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+   
+    background: #f9f9f9;/*背景色*/
+    
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.64);/*影*/
+    width:700px;
+    display:block;
+}
+.form-group p {
+    margin: 0; 
+    padding: 0;
+}
+
+.title-sentence{
+    font-size: 24px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.4);
+}
