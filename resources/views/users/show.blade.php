@@ -8,7 +8,10 @@
     <div class="row">
         <div class="col-xs-9 col-xs-offset-1">
             <ul class="nav nav-tabs nav-justified">
-                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}">Letian News投稿フォーム</li>
+
+                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Letian News投稿フォーム<span class="badge"></span></a></li>
+
+              
         
             </ul>
             
@@ -23,9 +26,7 @@
                           {!! Form::textarea('title', old('title'), ['class' => 'form-control', 'rows' => '2']) !!}
                           <p>コメント（200字以内）</p>
                           {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '2']) !!}
-                          <p>特性</p>
-                          {!! Form::select('font',['1' => "A", '2' => "B"], null, ['class' => 'form']) !!}
-                          {!! Form::submit('Post', ['class' => 'form-control', 'rows' => '2'])!!}
+                          
                           {!! Form::submit('Post', ['class' => 'square_btn', 'rows' => '2'])!!}
 
                         
