@@ -1,10 +1,14 @@
  @extends('layouts.app')
  @section('content')
- @foreach ($newsposts as $newspost)
+ @foreach ($newsposts as $key => $newspost)
 
     <?php $user = \App\User::find($newspost->user_id); ?>
   <div class="media-body">
-
+@if (isset($newspost->count))
+                            
+                                <p class="text-center">{{ $key+1 }}位: {{ $newspost->count}} Favorite</p>
+                         
+                        @endif
             <div>
                 
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $newspost->created_at }}</span>
@@ -27,6 +31,7 @@
                 
                   @include('user_favorite.favorite_button', ['newsposts' => $newspost])
             </div>
+            
             
             <div>
                 @if (Auth::id() == $newspost->user_id)

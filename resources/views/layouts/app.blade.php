@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/appblade.css">
+<link rel="stylesheet" href="/css/appblade.css">
 <!DOCTYPE html>
 <html>
     <head>
