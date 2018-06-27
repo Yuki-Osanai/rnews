@@ -8,7 +8,10 @@
     <div class="row">
         <div class="col-xs-9 col-xs-offset-1">
             <ul class="nav nav-tabs nav-justified">
+
                 <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Letian News投稿フォーム<span class="badge"></span></a></li>
+
+              
         
             </ul>
             
