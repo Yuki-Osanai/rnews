@@ -38,6 +38,7 @@
             
             <div class="inu">
                 @include('user_favorite.favorite_button', ['newsposts' => $newspost])
+                
                 @if (Auth::id() == $newspost->user_id)
                     {!! Form::open(['route' => ['newsposts.destroy', $newspost->id], 'method' => 'delete']) !!}
                         {!! Form::submit('Delete', ['class' => 'square_btn']) !!}
@@ -45,9 +46,8 @@
                         
                     {!! Form::close() !!}
                 @endif
-            </div>
-            <div>
-                 <li>{!! link_to_route('comment', 'Comment', ['id' => $newspost->id]) !!}</li> 
+                 
+                 {!! link_to_route('comment', 'Comment', ['id' => $newspost->id] , ['class' => 'square_btn_2']) !!}
             </div>
         </div>
         </div>
