@@ -9,6 +9,7 @@ Route::get('/', 'NewspostsController@index');
 Route::get('mypage','NewspostsController@mypage')->name('mypage.show');
 Route::get('ichiran','NewspostsController@ichiran')->name('ichiran');
 Route::get('ranking/favorite', 'RankingController@ranking')->name('ranking.favorite');
+Route::get('newsposts/{id}/comment','NewspostsController@show')->name('comment');
 
 
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
