@@ -22,6 +22,7 @@ class NewspostsController extends Controller
             return view('welcome');
         }
     }
+    
  public function mypage()
     {
          $data = [];
@@ -79,7 +80,11 @@ class NewspostsController extends Controller
     }
     public function show($id)
     {
-        //
+        $comments = \App\Newspost::find($id);
+
+        return view('comment.comment', [
+            'newspost' => $comments,
+        ]);
     }
    
     public function edit($id)
