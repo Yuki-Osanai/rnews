@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="{{ secure_asset('css/navbar.css') }}">
 
 <html>
+
     <header>
 <div class="navbar navbar-default" role="navigation">
   　<div class="container">

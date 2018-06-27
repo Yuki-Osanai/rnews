@@ -49,3 +49,26 @@
     transform: translateY(2px);
 }
 
+<<<<<<< HEAD
+=======
+     
+ .media-body {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+   
+    background: #f9f9f9;/*背景色*/
+    
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.64);/*影*/
+    width:700px;
+    display:block;
+}
+.media-body p {
+    margin: 0; 
+    padding: 0;
+}
+
+.title-sentence{
+    font-size: 24px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.4);
+}
+>>>>>>> d8fc89cf9cea24691a9b83db4e5868793bfae919

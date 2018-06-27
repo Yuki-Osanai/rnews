@@ -1,5 +1,6 @@
  @extends('layouts.app')
  <link rel="stylesheet" href="{{ secure_asset('css/ichiran.css') }}">
+ 
  @section('content')
  @foreach ($newsposts as $key => $newspost)
  
@@ -18,7 +19,8 @@
                 {!! link_to_route('mypage.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $newspost->created_at }}</span>
             </div>
              <div>
-                <p>{!! nl2br(e($newspost->url)) !!}</p>
+                <div class ="title-sentence"><strong>{!! nl2br(e($newspost->title)) !!}</strong></div>
+                <a href="{!! nl2br(e($newspost->url)) !!}">{!! nl2br(e($newspost->url)) !!}</a>
                 <p>{!! nl2br(e($newspost->content)) !!}</p>
                 
                 

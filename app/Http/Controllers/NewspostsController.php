@@ -71,6 +71,9 @@ class NewspostsController extends Controller
     
     public function store(Request $request)
     {
+
+  
+
         $this->validate($request, [
             'content' => 'required|max:191',
              'title' => 'required|max:191',
@@ -85,6 +88,7 @@ class NewspostsController extends Controller
         return redirect('ichiran');
 
             
+
     }
     public function show($id)
     {
