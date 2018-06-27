@@ -15,17 +15,22 @@
                     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
         }
         
-        .media-body{
-                    display:block;
-                    border: solid 2px #6091d3;/*線*/
-                    border-radius: 10px;/*角の丸み*/
-                    margin:20px;
-                    padding: 0.5em 1em;
-                    width:700px;
-                    
-                 
-        }
-      
+  
+       
+       .media-body {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+   
+    background: #f9f9f9;/*背景色*/
+    border-top: solid 6px #1d6970;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.64);/*影*/
+    width:700px;
+    display:block;
+}
+.media-body p {
+    margin: 0; 
+    padding: 0;
+}
       
        
   
@@ -33,7 +38,7 @@
 
 
     <div class="row">
-        <aside class="col-xs-4">
+        <aside class="col-xs-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{ $user->name }}</h3>
@@ -51,7 +56,7 @@
           
      </aside>
         
-<div class="col-xs-8">
+<div class="col-xs-7">
  <ul class="nav nav-tabs nav-justified">
        <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('mypage.show', ['id' => $user->id]) }}">TimeLine </a></li>
        
@@ -66,9 +71,11 @@
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $newspost->created_at }}</span>
             
              <div>
-                <p>{!! nl2br(e($newspost->url)) !!}</p>
-                <p>{!! nl2br(e($newspost->content)) !!}</p>
                 <p>{!! nl2br(e($newspost->title)) !!}</p>
+                <a href="URL" target="_blank">
+                {!! nl2br(e($newspost->url)) !!}</a>
+                <p>{!! nl2br(e($newspost->content)) !!}</p>
+                
                  @include('user_favorite.favorite_button', ['newsposts' => $newspost])
             </div>
             
