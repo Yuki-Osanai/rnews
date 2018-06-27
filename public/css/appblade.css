@@ -12,3 +12,11 @@
         
     }
 }  
+
+.cover-img {
+width: 70%;
+height: 200px;
+overflow: auto;
+background-image: url(back.gif);
+background-attachment: fixed;
+}

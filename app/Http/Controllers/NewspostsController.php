@@ -75,13 +75,11 @@ class NewspostsController extends Controller
             'content' => 'required|max:191',
              'title' => 'required|max:191',
               'url' => 'required|max:191',
-              'font' => 'required|max:191',
         ]);
         $request->user()->newsposts()->create([
             'content' => $request->content,
              'url' => $request->url,
              'title' => $request->title,
-            'font' => $request->font,
         ]);
 
         return redirect('ichiran');
