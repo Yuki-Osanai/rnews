@@ -1,0 +1,9 @@
+.text-center li a {
+font-weight: bold;
+text-align: center;
+color: #ffffff;
+}
+
+.ranking1 {
+float: right;
+}

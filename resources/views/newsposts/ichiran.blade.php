@@ -20,22 +20,13 @@
              <div>
                 <p>{!! nl2br(e($newspost->url)) !!}</p>
                 <p>{!! nl2br(e($newspost->content)) !!}</p>
-                
-                <!--@if($newspost->font == "1")-->
-                <!--<div class = 'selectfontA'>-->
-                <!--<p>{!! nl2br(e($newspost->title)) !!}</p>-->
-                <!--<p>A</p>-->
-                <!--</div>-->
-                <!--@else-->
-                <!--<div class = "h4">-->
-                <!--<p>{!! nl2br(e($newspost->title)) !!}</p>-->
-                <!--<p>B</p>-->
-                <!--</div>-->
-                <!--@endif-->
-                
+             </div>   
+             <div class="ranking1">
                   @include('user_favorite.favorite_button', ['newsposts' => $newspost])
             </div>
-            
+            <div class="panel-body">
+                    <img class="media-object img-rounded img-responsive" src="{{ Gravatar::src($user->email, 100) }}" alt="">
+            </div>
             
             <div>
                 @if (Auth::id() == $newspost->user_id)
