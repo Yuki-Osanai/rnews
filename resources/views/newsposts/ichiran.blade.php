@@ -8,7 +8,6 @@
 
     <?php $user = \App\User::find($newspost->user_id); ?>
   <div class="media-body">
-      
 
             <div>
                 
