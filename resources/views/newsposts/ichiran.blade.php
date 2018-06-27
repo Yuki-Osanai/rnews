@@ -21,9 +21,12 @@
                 <p>{!! nl2br(e($newspost->url)) !!}</p>
                 <p>{!! nl2br(e($newspost->content)) !!}</p>
                 
-               
+               @if (Auth::id() == $user->id)
+                  {!! Form::open(['route' => 'newsposts.store']) !!}
+                   <p>コメント</p>
+                          {!! Form::textarea('url', old('url'), ['class' => 'form-control', 'rows' => '2']) !!}
                 
-                  
+               @endif   
             </div>
             
             

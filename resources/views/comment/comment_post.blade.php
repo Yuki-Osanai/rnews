@@ -1,5 +1,11 @@
+@extends('layouts.app')
+
+@section('content')
+
+@endsection
+
 <ul class="media-list">
-@foreach ($microposts as $micropost)
+@foreach ($comments as $comment)
     <?php $user = $micropost->user; ?>
     <li class="media">
         <div class="media-left">
