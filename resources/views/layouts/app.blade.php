@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/appblade.css">
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,12 +13,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
+        <link rel="stylesheet" href="{{ secure_asset('css/appblade.css') }}">
+        
     </head>
     <body>
         
         @include('commons.navbar')
         @yield('cover')
-       <div class="cover-img" style="background-image:url('dogshiro1.png');">  
+       <div class="cover-img" style="background-image:url('{{ asset('dogshiro1.png') }}');">  
 
        
             @include('commons.error_messages')

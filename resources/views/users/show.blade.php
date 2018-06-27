@@ -1,9 +1,9 @@
 @extends('layouts.app')
-<link rel="stylesheet" href="/css/show.css">
+<link rel="stylesheet" href="{{ secure_asset('css/show.css') }}">
 
 @section('content')
-            
-            
+
+
 
     <div class="row">
         <div class="col-xs-9 col-xs-offset-1">
