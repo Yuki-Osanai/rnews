@@ -20,10 +20,9 @@
     <ul class="nav navbar-nav">
      @if (Auth::check())
                 <div class="dropdown">
-                    <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" > 
-                     <span class = "glyphicon glyphicon-menu-hamburger"></span></a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <button type="button" class="btn btn-default">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" > <span class = "glyphicon glyphicon-menu-hamburger"></span></a>
+                        <ul class="dropdown-menu">
                             <li>{!! link_to_route('mypage.show', 'My Page', ['id' => Auth::id()]) !!}</li> 
                             <li>{!! link_to_route('ranking.favorite', 'Ranking') !!}</li> 
                             <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
@@ -44,5 +43,7 @@
    </div>
  </div>
  
+ 
+
     </header>
 </html>
