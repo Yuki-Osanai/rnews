@@ -1,6 +1,7 @@
 @extends('layouts.app')
 <link rel="stylesheet" href="{{ secure_asset('css/show.css') }}">
 
+
 @section('content')
 
 
@@ -22,7 +23,7 @@
                           
                           <p>ニュースURL</p>
                           {!! Form::textarea('url', old('url'), ['class' => 'form-control', 'rows' => '2']) !!}
-                          <p>ニュースタイトル（150字以内）</p>
+                          <div class='title-sentence'>ニュースタイトル（150字以内）</div>
                           {!! Form::textarea('title', old('title'), ['class' => 'form-control', 'rows' => '2']) !!}
                           <p>コメント（200字以内）</p>
                           {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '2']) !!}
