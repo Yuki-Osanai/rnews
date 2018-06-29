@@ -9,15 +9,12 @@
 
     <?php $user = \App\User::find($newspost->user_id); ?>
   <div class="media-body">
-<<<<<<< HEAD
       
 @if (isset($newspost->count))
                             
                                <p class="text-center">{{ $key+1 }}位: {{ $newspost->count}} Favorite</p>
                        @endif
-=======
 
->>>>>>> f0e3f236aeb73a4b96645d9cabbde0f286053d5c
             <div>
                 
                 {!! link_to_route('mypage.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $newspost->created_at }}</span>
