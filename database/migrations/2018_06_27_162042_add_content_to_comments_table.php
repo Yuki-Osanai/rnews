@@ -13,9 +13,12 @@ class AddContentToCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::table('comments', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
+            $table->integer('comment_id');
             $table->string('content');
+            $table->timestamps();
         });
     }
 
