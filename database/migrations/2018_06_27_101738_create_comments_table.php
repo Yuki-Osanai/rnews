@@ -14,7 +14,6 @@ class CreateCommentsTable extends Migration
         $table->increments('id');
         $table->integer('comment_id')->unsigned()->index();
         $table->string('content');
-        
         $table->timestamps();
         $table->foreign('comment_id')->references('id')->on('newsposts');
 

@@ -3,7 +3,9 @@
 
 
 @section('content')
+<div class=kakomi>
+    
     <h1>Favoriteランキング</h1>
     @include('newsposts.ichiran', ['newsposts' => $newsposts])
-
+</div>
 @endsection

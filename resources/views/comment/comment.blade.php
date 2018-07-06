@@ -17,10 +17,6 @@
                           
                           <h3>コメント（200字以内）</h3>
                           {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '4']) !!}
-                          
-                          
-                          
-                          
                           {!! Form::submit('Post', ['class' => 'square_btn', 'rows' => '2'])!!}
 
                         

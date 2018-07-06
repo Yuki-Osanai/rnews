@@ -66,4 +66,11 @@ class User extends Authenticatable
     public function is_favorites($newspostId) {
     return $this->favorites()->where('favorite_id', $newspostId)->exists();
     }
+
+
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

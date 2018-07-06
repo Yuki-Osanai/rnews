@@ -4,8 +4,9 @@
  @section('content')
  @foreach ($newsposts as $key => $newspost)
  
+
 <div class="main">
-    <div class="kakomi-maru2">
+    <div id="kakomi-maru2">
 
     <?php $user = \App\User::find($newspost->user_id); ?>
   <div class="media-body">
@@ -17,7 +18,7 @@
 
             <div>
                 
-                {!! link_to_route('mypage.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $newspost->created_at }}</span>
+               <span class="text-muted">posted at {{ $newspost->created_at }}</span>
             </div>
              <div>
                 <div class ="title-sentence"><strong>{!! nl2br(e($newspost->title)) !!}</strong></div>
@@ -40,6 +41,14 @@
                 @endif
                  
                  {!! link_to_route('comment', 'Comment', ['id' => $newspost->id] , ['class' => 'square_btn_2']) !!}
+                 
+                 <form>
+                    <INPUT type="button" value="silver" onClick="changeColor(0)">
+                    <INPUT type="button" value="orange" onClick="changeColor(1)">
+                    <INPUT type="button" value="pink" onClick="changeColor(2)">
+                    <INPUT type="button" value="skyblue" onClick="changeColor(3)">
+                </form>
+            
             </div>
         </div>
         </div>

@@ -92,7 +92,7 @@ class NewspostsController extends Controller
     }
     public function show($id)
     {
-        $comments = \App\Newspost::find($id);
+        $comments = \App\User::find($id);
 
         return view('comment.comment', [
             'newspost' => $comments,

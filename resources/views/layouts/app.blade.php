@@ -14,6 +14,22 @@
         
         <link rel="stylesheet" href="{{ secure_asset('css/appblade.css') }}">
         
+         <SCRIPT language="JavaScript">
+            <!--
+            function changeColor(num){
+                 if(num==0){
+                   document.getElementById('kakomi-maru2').style.backgroundColor="silver";
+                 }else if(num==1){
+                    document.getElementById('kakomi-maru2').style.backgroundColor="orange";
+                 }else if(num==2){
+                     document.getElementById('kakomi-maru2').style.backgroundColor="pink";
+                 }else if(num==3){
+                     document.getElementById('kakomi-maru2').style.backgroundColor="skybleu";
+                  }
+            }
+            // -->
+        </SCRIPT>
+        
     </head>
     <body>
         
@@ -25,7 +41,7 @@
             @include('commons.error_messages')
 
             @yield('content')
-    </div>
-</div>
+         </div>
+        </div>
     </body>
 </html>

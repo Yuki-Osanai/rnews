@@ -52,8 +52,9 @@ class CommentsController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -86,6 +87,10 @@ class CommentsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comment = \App\User::find($id);
+        if (\Auth::id() === $comment->comment_id) {
+            $comment->delete();
+        }
+        return redirect()->back();
     }
 }
